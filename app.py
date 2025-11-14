@@ -2,16 +2,18 @@
 pip install fastapi uvicorn python-multipart aiofiles
 """
 
+import os
 import socket
 
 import aiofiles
 import uvicorn
-from fastapi import FastAPI, File, UploadFile
-from fastapi.responses import HTMLResponse
+from fastapi import FastAPI, File, HTTPException, UploadFile, status
+from fastapi.responses import FileResponse, HTMLResponse
 from fastapi.staticfiles import StaticFiles
 
 app = FastAPI()
 app.mount("/html", StaticFiles(directory="html_files", html=True), name="html")
+os.makedirs("can_be_downloaded", exist_ok=True)
 
 
 def get_local_ip():
@@ -30,6 +32,29 @@ def get_local_ip():
 @app.get("/")
 async def index():
     return HTMLResponse(content=open("html_files/index.html").read())
+
+
+@app.get("/download")
+async def download_page():
+    files = os.listdir("can_be_downloaded")
+    html = "<html><head><title>Download Files</title></head><body><h1>Download Files</h1><ul>"
+    for file in files:
+        html += f'<li><a href="/download/file/{file}">{file}</a></li>'
+    html += "</ul></body></html>"
+    return HTMLResponse(content=html)
+
+
+@app.get("/download/file/{filename}")
+async def download_file(filename: str):
+    file_path = f"can_be_downloaded/{filename}"
+    if os.path.exists(file_path):
+        return FileResponse(
+            file_path, media_type="application/octet-stream", filename=filename
+        )
+    else:
+        raise HTTPException(
+            status_code=status.HTTP_404_NOT_FOUND, detail="File not found"
+        )
 
 
 @app.post("/upload")
