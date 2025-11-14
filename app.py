@@ -3,11 +3,12 @@ pip install fastapi uvicorn python-multipart aiofiles
 """
 
 import socket
-from fastapi import FastAPI, UploadFile, File
-from fastapi.responses import HTMLResponse
-from fastapi.staticfiles import StaticFiles
+
 import aiofiles
 import uvicorn
+from fastapi import FastAPI, File, UploadFile
+from fastapi.responses import HTMLResponse
+from fastapi.staticfiles import StaticFiles
 
 app = FastAPI()
 app.mount("/html", StaticFiles(directory="html_files", html=True), name="html")
