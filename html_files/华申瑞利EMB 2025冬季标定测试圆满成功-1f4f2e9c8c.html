@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>华申瑞利EMB 2025冬标圆满收官</title>
+    <script src="https://cdn.tailwindcss.com/3.3.3"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Noto Sans SC', -apple-system, BlinkMacSystemFont, sans-serif;
+            background-color: #f0f4f8;
+            color: #1e293b;
+            line-height: 1.7;
+        }
+        .glassmorphism {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(16px);
+            border-radius: 20px;
+            box-shadow: 0 10px 40px rgba(31, 38, 135, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.4);
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .glassmorphism:hover {
+            box-shadow: 0 15px 45px rgba(31, 38, 135, 0.15);
+            transform: translateY(-3px);
+        }
+        .speaker-a {
+            color: #1e40af;
+            font-weight: 600;
+            padding: 0.3rem 0.6rem;
+            border-radius: 6px;
+            background-color: rgba(30, 64, 175, 0.1);
+            transition: all 0.3s ease;
+        }
+        .speaker-b {
+            color: #9d174d;
+            font-weight: 600;
+            padding: 0.3rem 0.6rem;
+            border-radius: 6px;
+            background-color: rgba(157, 23, 77, 0.1);
+            transition: all 0.3s ease;
+        }
+        .speaker-a:hover, .speaker-b:hover {
+            transform: translateX(3px);
+        }
+        .transcript-container {
+            padding: 2rem;
+            background: rgba(255, 255, 255, 0.7);
+            border-radius: 16px;
+        }
+        .transcript-container p {
+            margin-bottom: 1.5rem;
+            padding: 0.8rem 0;
+            line-height: 1.8;
+        }
+        .active-line {
+            margin: 1rem -2rem;
+            padding: 1.2rem 2rem;
+        }
+        .waveform {
+            height: 160px;
+            width: 100%;
+            aspect-ratio: 21/9;
+            border-radius: 16px;
+            position: relative;
+            overflow: hidden;
+            transition: all 0.3s ease;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+        .waveform:hover {
+            transform: scale(1.01);
+        }
+        .header-bg {
+            background: linear-gradient(135deg, #1e3a8a 0%, #9d174d 100%);
+            color: white;
+            padding: 2rem 0;
+            border-radius: 0 0 20px 20px;
+            margin-bottom: 2rem;
+        }
+    </style>
+</head>
+<body class="min-h-screen">
+    <div class="header-bg">
+        <div class="container mx-auto px-4 text-center">
+            <h1 class="text-3xl font-bold mb-2">华申瑞利EMB 2025冬标圆满收官</h1>
+            <p class="text-xl opacity-90">再战极寒，技术亮剑，冲刺EMB量产元年</p>
+            <p class="text-sm opacity-75 mt-2">2025年3月26日</p>
+        </div>
+    </div>
+
+    <div class="container mx-auto px-4 py-8 max-w-4xl">
+        <div class="glassmorphism p-6 mb-8">
+            <div class="waveform mb-4" style="background-image: url('https://s.coze.cn/image/eR-jvIoblyI/')"></div>
+            
+            <div class="flex items-center justify-between mb-4">
+                <audio id="podcast-audio" controls class="w-full">
+                    <source src="https://lf-bot-studio-plugin-resource.coze.cn/obj/bot-studio-platform-plugin-tos/sami_podcast/tts/cf5864dbd8c44ff18ab89053a1c274c4.mp3" type="audio/mpeg">
+                    您的浏览器不支持音频播放
+                </audio>
+            </div>
+            <p class="text-xs text-gray-500 mt-2">*若商用，需要声明由扣子空间生成</p>
+        </div>
+         
+        <div class="glassmorphism p-6">
+            <h2 class="text-xl font-semibold mb-4 flex items-center">
+                <i class="fas fa-closed-captioning mr-2 text-blue-600"></i>播客字幕
+            </h2>
+            
+            <div class="transcript-container p-4 bg-gray-50 rounded-lg" id="transcript">
+                <p class="mb-3"><span class="speaker-a">男生:</span> 哈喽大家好欢迎收听今天的播客，啊今天咱们来聊一聊，华申瑞利的 EMB 二零二五的冬季标定测试。啊，圆满完成，以及他们在这个量产的进程上面又迈进了一大步。</p>
+                
+                <p class="mb-3"><span class="speaker-b">女生:</span> 听起来很让人兴奋，那我们就直接开始吧，看看他们是怎么做到的。</p>
+                
+                <p class="mb-3"><span class="speaker-a">男生:</span> 啊，咱们第一个问题啊就来了，说华申瑞利的这个 EMB 二零二五的冬季标定测试。到底是一个什么样的结果，以及他有什么样的意义？</p>
+                
+                <p class="mb-3"><span class="speaker-b">女生:</span> 呃，这个测试呢是在黑龙江的嫩江，嗯，极寒测试场。在零下三十度的环境下面，嗯完成了这个标定测试嗯。而且呢，这是他们连续第二年，嗯，通过了这种极寒的，严苛的测试。而且呢还获得了，合作伙伴的认可嗯以及，头部的 OEM 专家团队的验收。</p>
+                
+                <p class="mb-3"><span class="speaker-a">男生:</span> 哇，连续两年通过这样的测试，确实很有说服力啊！</p>
+                
+                <p class="mb-3"><span class="speaker-b">女生:</span> 是啊而且就是这个，华申瑞利他们是一二年成立的。然后二四年才首次参加冬标，二五年就已经是第二次参加冬标了嗯。而且他这个时间点也非常的巧就是正好是这个 EMB 系统。迈向量产的关键的时间点。所以他这个测试的成功不光是验证了技术。同时也给整个行业的未来发展注入了新的动能。</p>
+                
+                <p class="mb-3"><span class="speaker-a">男生:</span> 说这个华申瑞利他们的这个 EMB 系统在冬季标定测试当中表现到底怎么样？</p>
+                
+                <p class="mb-3"><span class="speaker-b">女生:</span> 嗯，他们这个公司呢是专注于，汽车的干式线控制动系统。嗯，而且是从这个制动模块。到，整车的系统解决方案都是自己做的嗯，而且尤其擅长这种从零到一的正向研发。所以他们这个技术实力还是非常厉害的。</p>
+                
+                <p class="mb-3"><span class="speaker-a">男生:</span> 看来是在技术上面确实是有一手啊！</p>
+                
+                <p class="mb-3"><span class="speaker-b">女生:</span> 没错没错，然后呢这次冬季标定测试呢他们是在极寒的环境下面。用了差不多三个月的时间嗯，完成了二十多种工况的验证。嗯，包括比如说 ABS 的冰面变道。嗯 TCS 的冰面起步，包括坡道起步等等这些。非常严苛的这种场景的测试，都完全通过了，所以就是。进一步验证了这个 EMB 系统在极限条件下的稳定性和可靠性。</p>
+                
+                <p class="mb-3"><span class="speaker-a">男生:</span> 说这个 EMB 系统的量产现在是什么样的一个情况，然后华申瑞利在这中间做了哪些？</p>
+                
+                <p class="mb-3"><span class="speaker-b">女生:</span> 呃现在就是已经基本上可以看到。这个行业的头部企业已经把这个 EMB 上车的时间点定在了二零二六年。然后呢华申瑞利这边呢是他的 CEO 表示就是。他们认为现在从市场的需求。到法规的支持，嗯都已经基本上。为 EMB 的量产铺平了道路。</p>
+                
+                <p class="mb-3"><span class="speaker-a">男生:</span> 听起来好像是说，这个 EMB 系统的这个曙光就在眼前了哈。</p>
+                
+                <p class="mb-3"><span class="speaker-b">女生:</span> 是的是的，然后华申瑞利的这个 EMB 呢已经进入到了量产前验证的最后阶段。这次冬标的成功呢也是。让他们离这个目标又近了一步，嗯就是他们也是从实验室。走到了这个极寒的测试场。用实际的数据，验证了技术的可行性。接下来就是要全力的去冲刺量产。</p>
+                
+                <p class="mb-3"><span class="speaker-a">男生:</span> OK 今天咱们聊了这么多关于华申瑞利的这个 EMB 系统在极寒测试当中的表现。然后以及他们在这个量产的进程上面的重大的突破。可以说他们不光是展现了自己的技术实力。同时也给整个行业的未来，指明了一个方向。</p>
+                
+                <p class="mb-3"><span class="speaker-b">女生:</span> 以上就是这期播客的全部内容啦，然后咱们下期再见拜拜！</p>
+            </div>
+        </div>
+
+        <div class="mt-8 text-center text-gray-500 text-sm">
+            <p>页面内容均由 AI 生成，仅供参考</p>
+            <p>created by <a href="https://space.coze.cn" class="text-blue-600 hover:underline">coze space</a></p>
+        </div>
+    </div>
+</body>
+</html>
